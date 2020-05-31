@@ -1,46 +1,37 @@
-// работа с гит $ git config --global user.name "Dinar Shafickov"
+// Находим по id кнопку open-modal
+var openModalButton = document.getElementById('open-modal');
 
 
-// $ git config --global user.email "shafickovd@yandex.ru"
+var modalWindow = document.getElementById('modal');
+
+var modalCloseButton = document.getElementById('close-modal-button');
 
 
-//  Функции (ДЗ:стрелочные функции, анонимные самовызывающие функции)
-
-function logName(name, age) {
-    console.log(`Hello my name ${name} is and my age is ${age}`);
-}
-logName('Dinar', 23)
-
-// Объекты (ДЗ: методы объектов,)
-
-
-var x = {
-    a: 100,
-    b: 1000,
-    c: 'Dinar',
+// Функция для открытия модального окна
+function openModal() {
+    modalWindow.classList.add('modal--visible');
 }
 
-console.log(x['a'], x.a);
+// Функция для закрытия модального окна
+function closeModal() {
+    modalWindow.classList.remove('modal--visible');
+}
 
-
-
-var button = document.getElementById('action-button');
-
-
-
-var div = document.querySelector('div')
-
-console.log(div);
-
-div.addEventListener('mouseover', function() {
-    console.log('mouse over');
-})
-
-div.addEventListener('mouseleave', function() {
-    console.log('mouse leave');
-})
-
-button.addEventListener('click', function() {
-    div.classList.add('custom');
-    div.id = 'custom-div-id'
+openModalButton.addEventListener('click', function() {
+    openModal();
 });
+
+// Проверка на нажатие modalWindow
+modalWindow.addEventListener('click', function(event) {
+    if (event.target === modalWindow) {
+        closeModal();
+    }
+});
+
+modalCloseButton.addEventListener('click', function(event) {
+    if (event.target === modalCloseButton) {
+        closeModal(); 
+        console.log('123123');
+    }
+});
+

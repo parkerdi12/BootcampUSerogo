@@ -35,3 +35,31 @@ modalCloseButton.addEventListener('click', function(event) {
     }
 });
 
+
+//  Добавляем элементы в список
+
+var list = document.getElementById('list');
+
+var addItemButton = document.getElementById('add-item');
+
+// Функция для добавления нового элемента в спсок
+
+function addNewItemToList (item) {
+    // Создаем элемент
+    var listItem = document.createElement('li')
+    // Добавлем содержимое в элемент
+    listItem.innerHTML = item;
+    // Вставляем созданный элемент в список
+    list.appendChild(listItem)
+}
+
+addItemButton.addEventListener('click', function () {
+    addNewItemToList('adasdasdasd');
+});
+
+// Сделать функцию которая возвращает значение
+
+
+    
+
+

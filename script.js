@@ -1,3 +1,9 @@
+// работа с гит $ git config --global user.name "Dinar Shafickov"
+
+
+// $ git config --global user.email "shafickovd@yandex.ru"
+
+
 //  Функции (ДЗ:стрелочные функции, анонимные самовызывающие функции)
 
 function logName(name, age) {
